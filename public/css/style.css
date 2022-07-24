@@ -39,7 +39,6 @@ a {
 	border-radius: 15px;
 }
 
-/* Chat Page */
 
 .chat-container {
 	width: 100vw;
@@ -96,7 +95,6 @@ a {
 .chat-sidebar ul li {
 	padding: 10px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
 	border-radius: 5px;
 	margin: 5px 0;
 }
@@ -110,7 +108,7 @@ a {
 	position: relative;
 	padding: 30px;
 	overflow-y: auto;
-	height: calc(100vh - 128px);
+	height: calc(100vh - 148px);
 	background-color: #fff;
 	overflow: auto;
 	z-index: 5;
@@ -162,14 +160,13 @@ a {
 	height: 40px;
 	flex: 1;
 	outline: none;
-	z-index: 10;
+	margin: 1px 0;
 }
 
-/* Join Page */
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
-	height: 100vh;
+	height: 90vh;
 }
 
 .join-header {
@@ -197,12 +194,12 @@ a {
 
 .join-main .form-control {
 	margin-bottom: 20px;
-	/* margin-top: 20px; */
 }
 
 .join-main label {
 	display: block;
 	margin-bottom: 5px;
+	z-index: 10
 }
 
 .join-main input[type='text'] {
@@ -211,6 +208,7 @@ a {
 	height: 40px;
 	width: 100%;
 	outline: none;
+	margin: 10px 0;
 }
 
 .join-main select {
@@ -248,15 +246,16 @@ a {
 }
 .btn-l-mo{
 	position: relative;
-	/* float: right; */
 	transform: translate(0,-20px);
-	/* padding: 10px; */
 	margin: 20px 0;
 }
 #leave-btn1{
 	display: none;
 }
 @media (max-width: 700px) {
+	.join-header{
+		padding-top: 40px;
+	}
 	.chat-header img{
 		width: 50px;
 	}
@@ -278,7 +277,7 @@ a {
 	.chat-messages{
 		padding: 5px 10px;
 	}
-	
+
     #leave-btn{
 	display: none;
    }
@@ -293,8 +292,16 @@ a {
 		width: 0px;
 		height: calc(100vh - 65px);
 	}
+	.chat-header{
+		height: 85px;
+
+	}
 	.chat-header h1{
 		font-size: 22px;
+	}
+	.chat-header h1,
+	.chat-header img{
+		transform: translate(0,10px);
 	}
 	.chat-form-container{
 		position: fixed;
@@ -305,9 +312,7 @@ a {
 		height: calc(100vh - 140px);
 	}
 	.join-container {
-		/* max-width: 500px; */
 		margin: 0;
-		/* color: #fff; */
 		height: 100vh;
 	}
 	.join-main .form-control {

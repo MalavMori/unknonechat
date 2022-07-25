@@ -27,14 +27,18 @@
 				</div>
 				<div class="btn-div">
 					<button type="button" class="btn" id="btn2">Creact Room</button>
-					<button type="submit" class="btn">Join Room</button>
+					<button type="button" class="btn" id="btn3">Public Chat </button>
+					<button type="submit" class="btn" id="btn1">Join Room</button>
 				</div>
 			</form>
 		</main>
 	</div>
 	<script>
-		const btn2 = document.getElementById('btn2')
-		const curroom = document.getElementById('room')
+		const btn1 = document.getElementById('btn1');
+		const btn2 = document.getElementById('btn2');
+		const btn3 = document.getElementById('btn3');
+		const curroom = document.getElementById('room');
+		const username = document.getElementById('username');
 		const array = 'a9bc6def1ghij3kl7m4n2opq5rst6uvw8xyz';
 		function outerfun() {
 			let roomNamea = ''
@@ -47,7 +51,12 @@
 		btn2.addEventListener('click', (e) => {
 			curroom.value = outerfun();
 		})
-		//chat.html?username=malav&room=Python
+		btn3.addEventListener('click', (e) => {
+		if(username.value != ''){
+		curroom.value = 'publicchat';
+		}
+		btn1.click();
+		})
 	</script>
 </body>
 
